@@ -12,6 +12,7 @@ from collections import Counter
 
 from get_input_data import get_input_data
 
+
 def part_one(left: list, right: list) -> int:
     left = sorted(left)
     right = sorted(right)
