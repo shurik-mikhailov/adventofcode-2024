@@ -6,7 +6,6 @@
 идем по оси абсцисс.
 """
 
-
 from typing import List, Tuple, Dict
 
 from get_input_data import get_input_data
