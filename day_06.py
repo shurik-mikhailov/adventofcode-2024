@@ -1,4 +1,12 @@
-from copy import deepcopy
+"""
+Черт возьми, я смог сделать это самостоятельно.
+Я довольно легко понял суть вопроса, но у меня есть проблемы с решением
+геометрических задач в контексте программирования. Как минимум, я сильно намучался с тем,
+что мы идем сначала по вертикальной оси, а уже потом, во вложенном цикле,
+идем по оси абсцисс.
+"""
+
+
 from typing import List, Tuple, Dict
 
 from get_input_data import get_input_data
@@ -55,6 +63,7 @@ def is_infinite_position(lab_map: List[str],
             return True
         seen_positions.add(state)
 
+
 def part_one(lab_map: List[str]) -> List[Tuple[int, int]]:
     height = len(lab_map)
     width = len(lab_map[0])
@@ -91,6 +100,7 @@ def part_two(lab_map: List[str], visited_positions: List[Tuple[int, int]]) -> in
             infinite_count += 1
 
     return infinite_count
+
 
 input_data = get_input_data(year=2024, task_number=6)
 input_lab_map = input_data.split('\n')
