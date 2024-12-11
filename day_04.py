@@ -1,3 +1,9 @@
+"""
+Смог решить это задание самостоятельно за час. Понаписал комментариев, как будто
+кто-то будет их читать, но все таки решил их потом удалить. Вторая часть доставила
+какое-то особое наслаждение, почувствовал себя на минуту программистом :)
+"""
+
 from typing import List
 
 from get_input_data import get_input_data
@@ -10,11 +16,9 @@ def xmas_exists_in_direction(target_word: str, matrix: List[str],
         new_row = row + i * row_direction
         new_col = col + i * col_direction
 
-        # check if coordinate in matrix borders
         if new_row < 0 or new_row >= len(matrix) or new_col < 0 or new_col >= len(matrix[0]):
             return False
 
-        # check if coordinate contains target char
         if matrix[new_row][new_col] != target_word[i]:
             return False
 
@@ -26,13 +30,13 @@ def mas_diagonal_exists(matrix: List[str],
                         row_direction: int, col_direction: int) -> bool:
     try:
         return (
-            matrix[row][col] == 'M' and
-            matrix[row + row_direction][col + col_direction] == 'A' and
-            matrix[row + 2 * row_direction][col + 2 * col_direction] == 'S'
+                matrix[row][col] == 'M' and
+                matrix[row + row_direction][col + col_direction] == 'A' and
+                matrix[row + 2 * row_direction][col + 2 * col_direction] == 'S'
         ) or (
-            matrix[row][col] == 'S' and
-            matrix[row + row_direction][col + col_direction] == 'A' and
-            matrix[row + 2 * row_direction][col + 2 * col_direction] == 'M'
+                matrix[row][col] == 'S' and
+                matrix[row + row_direction][col + col_direction] == 'A' and
+                matrix[row + 2 * row_direction][col + 2 * col_direction] == 'M'
         )
     except IndexError:
         return False
